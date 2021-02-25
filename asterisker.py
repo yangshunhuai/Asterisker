@@ -1,8 +1,6 @@
+#!/usr/bin/env python
 listFile = open('words.list', 'r', encoding='utf-8')
 listFromFile = listFile.read().splitlines()
-for i in listFromFile:
-	i.replace('\n', '')
-print('List: ' + str(listFromFile))
 
 def repl(word, wordList):
 	for i in wordList:
