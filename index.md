@@ -1,5 +1,6 @@
 # Asterisker
 脏话打星程序
+[前往GitHub主页](https://github.com/yangshunhuai/Asterisker)
 
 ## 使用方法
 1. 打开asterisker
