@@ -12,6 +12,14 @@ def repl(word, wordList):
 		word = word.replace(i, asterisks)
 	return word
 
-editButton = Button()
+editButton = Button('修改列表文件', key='editFile')
+inText = Text('请输入文字')
+inEntry = InputText(key='inWord')
 
-layout = []
+layout = [[editButton], 
+		 [inText], [inEntry]]
+
+root = Window('Asterisker GUI', layout)
+
+while True:
+	event, values = root.read()
