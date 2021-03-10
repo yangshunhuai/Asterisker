@@ -1,5 +1,10 @@
 #!/usr/bin/env python
 from PySimpleGUI import *
+import os
+import sys
+
+platform = sys.platform
+Print('Platform: ' + platform)
 
 listFile = open('words.list', 'r', encoding='utf-8')
 listFromFile = listFile.read().splitlines()
@@ -23,3 +28,9 @@ root = Window('Asterisker GUI', layout)
 
 while True:
 	event, values = root.read()
+	if event == 'editFile':
+		if platform == 'win32':
+			os.system('notepad words.list')
+	if event == WIN_CLOSED:
+		break
+root.close()
