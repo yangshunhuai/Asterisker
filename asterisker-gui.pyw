@@ -30,8 +30,8 @@ inText = Text('请输入文字')
 inEntry = InputText(key='inWord')
 inComplete = Button('开始过滤', key='start')
 
-layout = [[editButton], [loadButton], 
-		 [inText], [inEntry], [inComplete]]
+layout = [[editButton, loadButton], 
+		 [inText, inEntry, inComplete]]
 
 root = Window('Asterisker GUI', layout)
 
