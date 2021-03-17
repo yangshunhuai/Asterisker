@@ -11,6 +11,7 @@ def loadFile():
 	listFile = open('words.list', 'r', encoding='utf-8')
 	listFromFile = listFile.read().splitlines()
 	listFile.close()
+	if os.isfile
 	return listFromFile
 
 def repl(word, wordList):
