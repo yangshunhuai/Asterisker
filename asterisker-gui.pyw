@@ -8,11 +8,21 @@ Print('系统平台: ' + platform)
 Print('')
 
 def loadFile():
+	global noFile
+	global noEditor
+	if not os.path.isfile('words.list'):
+		popup('没有找到words.list文件！Asterisker即将退出')
+		noFile = True
+	else:
+		noFile = False
 	listFile = open('words.list', 'r', encoding='utf-8')
 	listFromFile = listFile.read().splitlines()
 	listFile.close()
-	if os.isfile
 	return listFromFile
+
+if not os.path.isfile('editor\\bowpad.exe'):
+	popup('没有找到BowPad编辑器！编辑功能不可用！')
+	noEditor = True
 
 def repl(word, wordList):
 	for i in wordList:
@@ -38,7 +48,9 @@ root = Window('Asterisker GUI', layout)
 
 while True:
 	event, values = root.read()
-	if event == 'editFile':
+	if noFile:
+		break
+	if event == 'editFile' and not noEditor:
 		if platform == 'win32':
 			os.system('editor\\bowpad.exe words.list')
 		if platform == 'darwin' or platform == 'linux':
