@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# Author:yangshunhuai@github
+# Author:yangshunhuai@jzcj
 
 from PySimpleGUI import *
 import os
@@ -11,7 +11,6 @@ platform = sys.platform
 
 def loadFile():
 	global noFile
-	global noEditor
 	if not os.path.isfile('words.list'):
 		popup('没有找到words.list文件！Asterisker即将退出')
 		noFile = True
@@ -24,7 +23,10 @@ def loadFile():
 
 if not os.path.isfile('editor\\bowpad.exe'):
 	popup('没有找到BowPad编辑器！编辑功能不可用！')
+	global noEditor
 	noEditor = True
+else:
+	noEditor = False
 
 def repl(word, wordList):
 	for i in wordList:
@@ -91,7 +93,7 @@ while True:
 	event, values = root.read()
 	if noFile:
 		break
-	if event == 'editFile' and not noEditor:
+	if event == 'editFile' and not noEditor == True:
 		if platform == 'win32':
 			os.system('editor\\bowpad.exe words.list')
 		if platform == 'darwin' or platform == 'linux':
