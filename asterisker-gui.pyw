@@ -40,9 +40,14 @@ loadButton = Button('刷新列表文件', key='reloadFile')
 inText = Text('请输入文字')
 inEntry = InputText(key='inWord')
 inComplete = Button('开始过滤', key='start')
+copyrightText1 = Text('Copyright (c) 2021 yangshunhuai')
+copyrightText2 = Text('本程序依照 MIT 协议开源。')
+copyrightButton = Button('查看开源信息')
 
 layout = [[editButton, loadButton], 
-		 [inText, inEntry, inComplete]]
+		 [inText, inEntry, inComplete], 
+		 [copyrightText1], 
+		 [copyrightText2, copyrightButton]]
 
 root = Window('Asterisker GUI', layout)
 
