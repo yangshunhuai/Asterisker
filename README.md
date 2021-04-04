@@ -1,5 +1,5 @@
 # Asterisker
-脏话打星程序
+关键词自动屏蔽程序
 
 ## 使用方法
 1. 打开asterisker
