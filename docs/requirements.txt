@@ -1,0 +1,12 @@
+本软件要求使用下列操作系统之一：
+
+Microsoft Windows XP 及更高版本
+
+如果您的计算机上安装了 Python 解释器，并使用 pip 或其他方式安装了以下依赖库：
+
+PySimpleGUI
+
+那么本软件也可在所有支持 Python 的操作系统中运行，例如：
+
+Apple Mac OS X
+Linux
